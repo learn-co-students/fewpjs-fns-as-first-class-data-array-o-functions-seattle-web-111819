@@ -32,4 +32,5 @@ const routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashD
 
 function exerciseDog(dogName, dogBreed) {
     return routine.map(rt => rt(dogName, dogBreed));
+    // Use .map to iterate through "routine" array and return a new array by passing in arguments "dogName" && "dogBreed"
 }
