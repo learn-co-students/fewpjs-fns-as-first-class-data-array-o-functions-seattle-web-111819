@@ -24,7 +24,34 @@ function unleashDog(dogName, dogBreed) {
 
 const routine = [wakeDog, leashDog, walkToPark, throwFrisbee, walkHome, unleashDog];
 
+// function exerciseDog(dogName, dogBreed) {
+//     return routine.map(rt => rt(dogName, dogBreed));
+//     // Use .map to iterate through "routine" array and return a new array by passing in arguments "dogName" && "dogBreed"
+
+// }
+
+// for loop
+// function exerciseDog(dogName, dogBreed) {
+//     let exercise = [];
+//     for (let i = 0; i < routine.length; i++) {
+//         exercise.push(routine[i](dogName, dogBreed));
+//     }
+//     return exercise;
+// }
+
+
+// .forEach
 function exerciseDog(dogName, dogBreed) {
-    return routine.map(rt => rt(dogName, dogBreed));
-    // Use .map to iterate through "routine" array and return a new array by passing in arguments "dogName" && "dogBreed"
+    let exercise = [];
+    routine.forEach(function(item) {
+        console.log(item(dogName, dogBreed));
+    });
+    return exercise;
 }
+
+// routine.forEach(myFunction);
+// function exerciseDog(dogName, dogBreed) {
+//     routine.forEach(element => {
+        
+//     });
+// }
